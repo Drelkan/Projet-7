@@ -1,8 +1,13 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import logoFooter from "../../assets/image/Logo-footer.png";
 
 export default function footer() {
   return (
-    <div>footer</div>
-  )
+    <footer>
+      <div>
+        <img src={logoFooter} alt="logo de kasa" />
+        <h3>© 2020 Kasa. All rights reserved</h3>
+      </div>
+    </footer>
+  );
 }

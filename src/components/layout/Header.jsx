@@ -1,12 +1,12 @@
 import React from 'react'
-import logo from "../../assets/image/LOGO.png"
+import logoHeader from "../../assets/image/Logo-header.png"
 import { NavLink } from "react-router-dom";
 
 
 export default function Header() {
   return (
     <header>
-        <img src={logo} alt="logo de kasa" />
+        <img src={logoHeader} alt="logo de kasa" />
         <nav>
             <ul>
                 <li>

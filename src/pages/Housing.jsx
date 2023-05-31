@@ -1,17 +1,13 @@
 import React from 'react'
 import Header from '../components/layout/Header'
 import Footer from "../components/layout/Footer"
-import Banner from '../components/reusable/Banner'
-import aboutBanner from "../assets/image/Banner-about.png"
 
 
-
-export default function About() {
+export default function Housing() {
   return (
     <div>
         <Header/>
-        <Banner src={aboutBanner}/>
-        About
+        Housing
         <Footer/>
     </div>
   )
