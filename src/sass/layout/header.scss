@@ -1,0 +1,19 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    nav{
+        width: 20%;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: $primary-color;
+                &.active{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
