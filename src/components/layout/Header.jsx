@@ -28,7 +28,6 @@ export default function Header() {
                   >
                     A Propos
                   </NavLink>
-
                 </li>
             </ul>
         </nav>

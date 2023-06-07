@@ -3,11 +3,13 @@ import Header from '../components/layout/Header'
 import Footer from "../components/layout/Footer"
 
 
-export default function Housing() {
+export default function Logement() {
   return (
     <div>
         <Header/>
-        Housing
+          <div>
+            test
+          </div>
         <Footer/>
     </div>
   )
