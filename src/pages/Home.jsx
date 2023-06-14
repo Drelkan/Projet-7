@@ -3,7 +3,7 @@ import Header from '../components/layout/Header'
 import Banner from '../components/reusable/Banner'
 import homeBanner from '../assets/image/Banner-home.png'
 import Footer from "../components/layout/Footer"
-import "typeface-montserrat"
+import { Link } from 'react-router-dom'
 // import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
@@ -35,11 +35,11 @@ export default function Home() {
         <Banner title="Chez vous, partout et ailleurs" src={homeBanner}/>
         {
           logements.map((logement) => ( 
-            <div className='test'>
-              <a className='logement' href="Logement">
+            <div className='test' key={logement.id}>
+              <Link className="logement" to={`/Logement/${logement.id}`}>
                 <img src={logement.cover} alt={logement.alt} />
-                <h2 key={logement.id} >{logement.title}</h2>
-              </a>
+                <h2>{logement.title}</h2>
+              </Link>
             </div>
           ))
         }
