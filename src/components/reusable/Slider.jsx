@@ -1,31 +1,14 @@
 import React from 'react'
-// import Carousel from "framer-notion-carousel"
 
 
-// const colors = ["#f90", "#ef0", "#"]
+const Slider = ({images}) => {
+// let [currentSlide, setCurrentSlide] = useState(0)
+console.log(images)
+  return (
+    <div>
+        <img src={images[0]} alt="" />
+    </div>
+  )
+}
 
-// const App = () => (
-//   <div style={{width: 600, height: 400, margin: "0 auto"}}>
-//     <Carousel>
-//       {[1, 2, 3, 4].map((item, i) => (
-//         <img 
-//           draggable="false"
-//           src={`./${item}.jpg`}
-//           key={i}
-//           width="100%"
-//           alt=""
-//         />
-//       ))}
-//     </Carousel>
-//   </div>
-// )
-// export default App
-
-//   return (
-//     <div>
-//         {
-//             pictures[0]
-//         }
-//     </div>
-//   )
-// }
+export default Slider
