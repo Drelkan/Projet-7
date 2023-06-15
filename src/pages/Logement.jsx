@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from '../components/layout/Header'
 import Footer from "../components/layout/Footer"
 import { useParams } from 'react-router-dom'
+import Collapsible from 'react-collapsible'
 import Slider from '../components/reusable/Slider'
 
 export default function Logement() {
@@ -35,10 +36,23 @@ export default function Logement() {
     <div>
         <Header/>
           {/* <div> */}
-          <Slider pictures={logement.pictures}/>
+          {/* <Slider pictures={logement.pictures}/> */}
+          {/* <Slider/> */}
             {
-              logement.title
-              
+              <div className='logement-card' key={logement.id}>
+                {/* <img src={location.picture} alt="" /> */}
+                <h1>{logement.title}</h1>
+                <h2>{logement.location}</h2>
+                <p>{logement.tags}</p>
+                <div className='collapsible-about'>
+                  <Collapsible trigger="Description">
+                  <p>{logement.description}</p>
+                  </Collapsible>
+                  <Collapsible trigger="Equipements">
+                  <p>{logement.equipments}</p>
+                  </Collapsible>
+                </div>
+              </div>
             }
           {/* </div> */}
         <Footer/>

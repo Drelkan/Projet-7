@@ -6,6 +6,8 @@ import Logement from "./pages/Logement"
 import NotFound from "./pages/NotFound"
 import "./sass/main.scss"
 
+
+
 function App() {
   return (
     <BrowserRouter>
