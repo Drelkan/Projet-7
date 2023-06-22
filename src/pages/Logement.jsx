@@ -3,66 +3,69 @@ import Header from '../components/layout/Header'
 import Footer from "../components/layout/Footer"
 import { useParams } from 'react-router-dom'
 import Slider from '../components/reusable/Slider'
-// import NotFound from "./NotFound"
+import NotFound from "./NotFound"
+
+const Collapsible = ({ title, content}) => {
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
+  return (
+    <div className='collapsible-about'>
+      <h2 onClick={toggleCollapse}>{title}</h2>
+      {!isCollapsed && <p>{content}</p>}
+    </div>
+  )
+}
+
+
 
 export default function Logement() {
   const [logement, setLogement] = useState({})
   const {id} = useParams()
   
-
   useEffect(() => {
     fetch("../datas/logements.json")
     .then(response => {
-      // console.log(response)
       if(response.ok){
-        // console.log(response)
         return response.json()
       }
-      // console.log(response)
     })
     .then((logementsFromApi) => {
-      // console.log(logementsFromApi)
       let test = logementsFromApi.find(logement => logement.id === id)
-      // if(test === undefined){
-        // return <NotFound/>
-      // }
+      if(test === undefined){
+        return <NotFound/>
+      }
       setLogement(test)
       console.log(test)
-      // console.log(logement.title)
-      // console.log(logement.pictures)
-      // return () => setLogement(test)
     })
     .catch((error) => console.log(error))
-    // console.log(logement)
   },[id])
 
 
   return (
     <div>
         <Header/>
-          {/* <div> */}
           {!logement.pictures ? "" :<Slider images={logement.pictures}/>}
-          {/* <Slider images={logement.pictures} logementId={id}/> */}
-          {/* <Slider/> */}
             {
               <div className='logement-card' key={logement.id}>
-                {/* <img src={location.picture} alt="" /> */}
                 <h1>{logement.title}</h1>
                 <h2>{logement.location}</h2>
-                <p>{logement.tags}</p>
-                {/* <p>{logement.host.name}</p>
-                <img src={logement.host.picture} alt='' /> */}
-                {/* <div className='collapsible-about'>
-                  <Collapsible trigger="Description">
-                  <p>{logement.description}</p>
-                  </Collapsible>
-                  <Collapsible trigger="Equipements">
-                  <p>{logement.equipments}</p>
-                  </Collapsible>
-                </div> */}
+                <div className='tag-container'>
+                  <p className='tag'>{logement.tags}</p>
+                </div>
+                <div className='hote'>
+                  {/* <p>{logement.host.name}</p>
+                  <img src={logement.host.picture} alt='Hote' /> */}
+                </div>
+                <div className='collapsible-about'>
+                  <Collapsible title="Description" content={logement.description}/>
+                  <Collapsible title="Equipement" content={logement.equipments}/>
+                </div>
               </div>
             }
-          {/* </div> */}
         <Footer/>
     </div>
   )
