@@ -1,43 +1,44 @@
 .carrousel{
-    border: solid 4px #fff;
-    box-shadow:0 0 14px rgba(0,0,0,0.3);
     position: relative;
     overflow: hidden;
 }
 
 
-.photo img{
-    width: 335px;
-    height: 255px;
-    margin: 0;
-    display: inline-block;
-    background-size: cover;
-    object-fit: cover;
+.photo {
+    display: flex;
+    justify-content: center;
+    img{
+        width: 335px;
+        height: 255px;
+        margin: 0;
+        display: inline-block;
+        background-size: cover;
+        object-fit: cover;
+        border-radius: 10px;
+    }
 }
 
 .bouton{
     position: absolute;
-    width: 70px;
+    width: 24px;
     cursor: pointer;
-    top: 150px;
+    top: 115px;
 }
 
 #gauche{
-    left: 0;
-    opacity: 0.4;
-    transform: rotate(0deg);
-}
-#droit{
-    right: 0;
-    opacity: 0.4;
+    left: 10px;
     transform: rotate(180deg);
 }
+#droit{
+    right: 10px;
+    transform: rotate(0deg);
+}
 
-.gauche:hover{
-    transform: rotate(0deg) scale(1.1);
-    opacity: 1;
-}
-.droit:hover{
-    transform: rotate(180deg) scale(1.1);
-    opacity: 1;
-}
+// .gauche:hover{
+//     transform: rotate(0deg) scale(1.1);
+//     opacity: 1;
+// }
+// .droit:hover{
+//     transform: rotate(180deg) scale(1.1);
+//     opacity: 1;
+// }

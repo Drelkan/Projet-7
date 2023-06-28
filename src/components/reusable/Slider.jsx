@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import arrow from '../assets/image/fleche2.png'
+import arrow from './../../assets/image/fleche.png'
 
 
 const Slider = ({images}) => {
@@ -23,8 +23,8 @@ return (
         <img src={images[currentImageIndex]} alt="" />
       </div>
     </div>
-    <img src="../assets/image/fleche2.png" className='bouton' id='gauche' alt="Gauche" onClick={gauche} />
-    <img src="../assets/image/fleche2.png" className='bouton' id='droit' alt="Droit" onClick={droit}/>
+    <img src={arrow} className='bouton' id='gauche' alt="Gauche" onClick={gauche} />
+    <img src={arrow} className='bouton' id='droit' alt="Droit" onClick={droit}/>
   </div>
   )
 }

@@ -1,4 +1,44 @@
-.tag-container p{
+.logement-title{
+    h1{
+        color: #FF6060;
+        width: 335px;
+        height: 46px;
+        margin: 0;
+    }
+    h2{
+        color: #FF6060;
+        width: 323px;
+        height: 22px;
+        margin: 0;
+    }
+}
+
+
+.star-test{
     display: flex;
-    flex-direction: column;
+    margin: 20% 1% 4% 1%;
+}
+
+
+.tag-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.hote{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0% 6% 0% 0%;
+    img{
+        width: 40px;
+        border-radius: 50%;
+    }
+    p{
+        width: 65px;
+        margin-right: 10px;
+        text-align: right;
+        color: #FF6060;
+    }
 }
