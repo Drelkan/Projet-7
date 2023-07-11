@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-import arrow from './../../assets/image/fleche.png'
+import React, { useState } from "react";
+import arrow from "./../../assets/image/fleche.png";
 
-
-const Slider = ({images}) => {
+const Slider = ({ images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const gauche = () => {
@@ -10,31 +9,52 @@ const Slider = ({images}) => {
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
+
   const droit = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
 
-return (
-  <div className='carrousel'>
-    <div className='container' id='logements'>
-      <div className='photo'>
-        <img src={images[currentImageIndex]} alt="" />
+  const showImageIndex = images.length > 1;
+
+  return (
+    <div className="carrousel">
+      <div className="container" id="logements">
+        <div className="photo">
+          {showImageIndex && (
+            <span className="image-index">
+              {currentImageIndex + 1} / {images.length}
+            </span>
+          )}
+          <img src={images[currentImageIndex]} alt="" />
+        </div>
       </div>
+      {showImageIndex && (
+        <img
+          src={arrow}
+          className="bouton"
+          id="gauche"
+          alt="Gauche"
+          onClick={gauche}
+        />
+      )}
+      {showImageIndex && (
+        <img
+          src={arrow}
+          className="bouton"
+          id="droit"
+          alt="Droit"
+          onClick={droit}
+        />
+      )}
     </div>
-    <img src={arrow} className='bouton' id='gauche' alt="Gauche" onClick={gauche} />
-    <img src={arrow} className='bouton' id='droit' alt="Droit" onClick={droit}/>
-  </div>
-  )
-}
+  );
+};
 
-export default Slider
+export default Slider;
 
-
-
-
-        {/* <div className='photo'>
+/* <div className='photo'>
           <img src={images[0]} alt="" />
           <img src={images[1]} alt="" />
           <img src={images[2]} alt="" />
@@ -42,10 +62,9 @@ export default Slider
           <img src={images[4]} alt="" />
         </div>
       {/* <img src={arrow}  className='bouton' id='gauche'/>
-      <img src='../assets/image/arrow.png'  className='bouton' id='droit'/> */}
+      <img src='../assets/image/arrow.png'  className='bouton' id='droit'/> */
 
-
-      {/* <script>
+/* <script>
   document.body.onload=function(){
     nbr=5,
     p=0,
@@ -86,4 +105,4 @@ export default Slider
     else
       droit.style.visibility="visible";
   }
-</script> */}
+</script> */

@@ -1,100 +1,62 @@
-import React, { useEffect, useState } from 'react'
-import Header from '../components/layout/Header'
-import Footer from "../components/layout/Footer"
-import {useParams, Navigate } from 'react-router-dom'
-import Slider from '../components/reusable/Slider'
-import Collapsible from '../components/reusable/Collapsible'
-import StarActive from '../assets/image/star-active.png'
-import StarInactive from '../assets/image/star-inactive.png'
-
+import React, { useEffect, useState } from "react";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
+import { useParams, Navigate } from "react-router-dom";
+import Slider from "../components/reusable/Slider";
+import Collapsible from "../components/reusable/Collapsible";
+import Rating from "../components/reusable/Rating";
+import Tags from "../components/reusable/Tags";
+import Host from "../components/reusable/Host";
+import LogementTitle from "../components/reusable/LogementTitle";
 
 export default function Logement() {
-  const [logement, setLogement] = useState({})
-  const {id} = useParams();
+  const [logement, setLogement] = useState({});
+  const { id } = useParams();
   const [isNotFound, setIsNotFound] = useState(false);
-  
+
   useEffect(() => {
     fetch("../datas/logements.json")
-    .then(response => {
-      if(response.ok){
-        return response.json()
-      }
-    })
-    .then((logementsFromApi) => {
-      let test = logementsFromApi.find(logement => logement.id === id)
-      if(test === undefined){
-        setIsNotFound(true);
-      }else{
-        setLogement(test)
-      }
-    })
-    .catch((error) => console.log(error))
-  },[id])
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+      })
+      .then((logementsFromApi) => {
+        let test = logementsFromApi.find((logement) => logement.id === id);
+        if (test === undefined) {
+          setIsNotFound(true);
+        } else {
+          setLogement(test);
+        }
+      })
+      .catch((error) => console.log(error));
+  }, [id]);
 
-if (isNotFound){
-  return <Navigate to="/not-found" replace />;
-}
+  if (isNotFound) {
+    return <Navigate to="/not-found" replace />;
+  }
 
-const rating = parseInt(logement.rating) || 0;
-console.log(rating)
+  const rating = parseInt(logement.rating) || 0;
+  console.log(rating);
 
   return (
     <div>
-        <Header/>
-          {!logement.pictures ? "" :<Slider images={logement.pictures}/>}
-            {
-              <div className='logement-card' key={logement.id}>
-                <div className='logement-title'>
-                  <h1>{logement.title}</h1>
-                  <h2>{logement.location}</h2>
-                </div>
-
-                    {logement.rating && (
-                      <div className='star-test'>
-                        {[...Array(parseInt(logement.rating) || 0)].map ((_, index) => (
-                              <div key={index} className='star-rating'>
-                                <img src={StarActive} alt="étoile" className='star-active' />
-                              </div>
-                            ))}
-                            {[...Array(5 - (parseInt(logement.rating) || 0))].map((_, index) => (
-                              <div key={index} className='star-rating'>
-                                <img src={StarInactive} alt="étoile" className='star-inactive' />
-                              </div>
-                            ))}
-                          </div>
-                    )}
-
-              {logement.tags && logement.tags.length > 0 && (
-                <div className='tag-container'>
-                  <ul className='tag-list'>
-                    {logement.tags.map((tag, index) => (
-                      <li key={index}>{tag}</li>
-                    ))}
-                  </ul>
-                  {/* <p className='tag'>{logement.tags}</p> */}
-                </div>
-                  )
-                } 
-
-                  {
-                    !logement.host ? "" : <div className='hote'><p>{logement.host.name}</p><img src={logement.host.picture} alt='Hote' /></div>
-                  }
-
-
-                <div className='collapsible-about'>
-                  <Collapsible title="Description" content={logement.description}/>
-                  <Collapsible title="Equipement" content={logement.equipments}/>
-                </div>
-              </div>
-            }
-        <Footer/>
+      <Header />
+      {!logement.pictures ? "" : <Slider images={logement.pictures} />}
+      <div className="logement-card" key={logement.id}>
+        <LogementTitle title={logement.title} location={logement.location} />
+        <Rating rating={logement.rating} />
+        <Tags tags={logement.tags} />
+        <Host host={logement.host} />
+        <div className="collapsible-about">
+          <Collapsible title="Description" content={logement.description} />
+          <Collapsible title="Equipement" content={logement.equipments} />
+        </div>
+      </div>
+      <Footer />
     </div>
-  )
+  );
 }
-
-
-
-
 
 // const Collapsible = ({ title, content}) => {
 //   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -123,3 +85,23 @@ console.log(rating)
 //     </div>
 //   )
 // }
+
+/* {logement.rating && (
+                      <div className='star-test'>
+                        {[...Array(parseInt(logement.rating) || 0)].map ((_, index) => (
+                              <div key={index} className='star-rating'>
+                                <img src={StarActive} alt="étoile" className='star-active' />
+                              </div>
+                            ))}
+                            {[...Array(5 - (parseInt(logement.rating) || 0))].map((_, index) => (
+                              <div key={index} className='star-rating'>
+                                <img src={StarInactive} alt="étoile" className='star-inactive' />
+                              </div>
+                            ))}
+                          </div>
+                    )} */
+
+//   <div className='logement-title'>
+//   <h1>{logement.title}</h1>
+//   <h2>{logement.location}</h2>
+// </div>

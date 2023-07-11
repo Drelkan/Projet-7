@@ -18,6 +18,11 @@
     }
 }
 
+.image-index{
+    position: absolute;
+    display: none;
+}
+
 .bouton{
     position: absolute;
     width: 24px;
@@ -26,19 +31,12 @@
 }
 
 #gauche{
-    left: 10px;
+    left: 15px;
     transform: rotate(180deg);
 }
 #droit{
-    right: 10px;
+    right: 15px;
     transform: rotate(0deg);
 }
 
-// .gauche:hover{
-//     transform: rotate(0deg) scale(1.1);
-//     opacity: 1;
-// }
-// .droit:hover{
-//     transform: rotate(180deg) scale(1.1);
-//     opacity: 1;
-// }
+
