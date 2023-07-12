@@ -1,52 +1,55 @@
-.banner{
-    position: relative;
-    padding: 0% 4%;
-    height: 111px;
+.home-card {
+  margin-top: 5%;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5% 0% 5% 0%;
+}
+.logement {
+  display: flex;
+  width: 335px;
+  position: relative;
+  border: 1px solid #ff6060;
+  border-radius: 10px;
+  height: 255px;
+  background-image: linear-gradient(
+    180deg,
+    hsl(0deg 100% 69%) 0%,
+    hsl(0deg 84% 65%) 9%,
+    hsl(0deg 70% 61%) 22%,
+    hsl(0deg 58% 56%) 40%,
+    hsl(0deg 48% 51%) 89%,
+    hsl(0deg 45% 46%) 97%,
+    hsl(0deg 45% 40%) 99%,
+    hsl(0deg 45% 32%) 100%,
+    hsl(0deg 45% 23%) 100%,
+    hsl(0deg 0% 0%) 100%
+  );
+  img {
     width: 100%;
-    overflow: hidden;
-    h1{
-        width: 48%;
-        position: absolute;
-        left: 6%;
-        top: 25%;
-        color: white;
-        font-family: montserrat;
-        font-size: 18px;
-    }
-    img{
-        width: 130%;
-        height: 100%;
-        border-radius: 10px;
-        object-fit: cover;
-    }
+    height: 70%;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+  }
 }
-.test{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5% 0% 5% 0%;
+.title {
+  h2 {
+    position: absolute;
+    font-size: 16px;
+    left: 5%;
+    top: 70%;
+    right: 20%;
+    color: white;
+  }
 }
-.logement{
-    display: flex;
-    width: 90%;
-    position: relative;
-    border: 1px solid #FF6060;
-    border-radius: 10px;
-    height: 200px;
-    background: #FF6060;
-    
-    img{
-        width: 100%;
-        height: 70%;
-        border-radius: 10px 10px 0px 0px;
-        object-fit: cover;
-    }
-    h2{
-        position: absolute;
-        font-size: 18px;
-        left: 5%;
-        top: 65%;
-        right: 20%;
-        color: white;
-    }
+
+@media screen and (min-width:576px){
+  
+}
+
+@media screen and (min-width:992px){
+  
 }

@@ -1,42 +1,47 @@
-.carrousel{
-    position: relative;
-    overflow: hidden;
+.carrousel {
+  position: relative;
+  overflow: hidden;
 }
-
 
 .photo {
-    display: flex;
-    justify-content: center;
-    img{
-        width: 335px;
-        height: 255px;
-        margin: 0;
-        display: inline-block;
-        background-size: cover;
-        object-fit: cover;
-        border-radius: 10px;
-    }
+  display: flex;
+  justify-content: center;
+  img {
+    width: 95%;
+    height: 255px;
+    margin: 5% 0% 0% 0%;
+    display: inline-block;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 }
 
-.image-index{
-    position: absolute;
-    display: none;
+.image-index {
+  position: absolute;
+  display: none;
 }
 
-.bouton{
-    position: absolute;
-    width: 24px;
-    cursor: pointer;
-    top: 115px;
+.bouton {
+  position: absolute;
+  width: 24px;
+  cursor: pointer;
+  top: 125px;
 }
 
-#gauche{
-    left: 15px;
-    transform: rotate(180deg);
+#gauche {
+  left: 15px;
+  transform: rotate(180deg);
 }
-#droit{
-    right: 15px;
-    transform: rotate(0deg);
+#droit {
+  right: 15px;
+  transform: rotate(0deg);
 }
 
+@media screen and (min-width:576px){
+  
+}
 
+@media screen and (min-width:992px){
+  
+}

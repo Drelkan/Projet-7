@@ -1,21 +1,29 @@
-.notFound{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 40% 0% 40% 0%;
-    img{
-        width: 198px;
-        margin-bottom: 10px;
-    }
-    h2{
-        color: #FF6060;
-        font-size: 18px;
-        width: 60%;
-        margin-bottom: 30%;
-    }
-    a{
-        text-decoration: none;
-        color: #FF6060;
-        font-size: 16px;
-    }
+.notFound {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40% 0% 40% 0%;
+  img {
+    width: 198px;
+    margin-bottom: 10px;
+  }
+  h2 {
+    color: #ff6060;
+    font-size: 18px;
+    width: 60%;
+    margin-bottom: 30%;
+  }
+  a {
+    text-decoration: none;
+    color: #ff6060;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width:576px){
+  
+}
+
+@media screen and (min-width:992px){
+  
 }

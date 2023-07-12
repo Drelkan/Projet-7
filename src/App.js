@@ -5,6 +5,7 @@ import About from "./pages/About"
 import Logement from "./pages/Logement"
 import NotFound from "./pages/NotFound"
 import "./sass/main.scss"
+import "./sass/index.scss"
 
 
 

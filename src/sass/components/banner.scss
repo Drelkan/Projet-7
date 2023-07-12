@@ -1,0 +1,48 @@
+.banner-home {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 4% 0% 0% 4%;
+  h1 {
+    width: 53%;
+    position: absolute;
+    left: 6%;
+    top: 20%;
+    color: white;
+    font-size: 20px;
+  }
+  img {
+    width: 95%;
+    height: 50%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+
+.banner-about {
+  display: flex;
+  justify-content: center;  
+  position: relative;
+  padding: 4% 0% 5% 4%;
+  img {
+    width: 95%;
+    height: 223px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .banner-home {
+    img {
+      width: 95%;
+      height: 222px;
+    }
+  }
+  .banner-about {
+    img {
+      width: 95%;
+      height: 223px;
+    }
+  }
+}

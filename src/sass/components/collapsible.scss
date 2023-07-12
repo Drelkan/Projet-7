@@ -1,54 +1,76 @@
-.Collapsible{
-    margin-bottom: 10%;
+.Collapsible {
+  margin-bottom: 10%;
 }
-.collapsible-about{
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    padding: 0% 0% 0% 2%;
-    margin: 0% 0% 5% 0%;
-    p, ul{
-        border: 1px solid #F6F6F6;
-        background-color: #F6F6F6;
-        color: #FF6060;
-        margin-top: 0px;
-        border-top: 0px;
-        border-radius: 0px 0px 5px 5px;
-        list-style: none;
-        padding: 0;
-    }
-
+.collaps{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.collapsible-title{
-    display: flex;
-    align-items: center;
-    border: 1px solid #ff6060;
-    background-color: #FF6060;
+.collapsible-about {
+  width: 90%;
+  margin: 0% 0% 5% 0%;
+  p,
+  ul {
+    border: 1px solid #f6f6f6;
+    background-color: #f6f6f6;
+    color: #ff6060;
+    margin-top: 0px;
+    border-top: 0px;
+    border-radius: 0px 0px 5px 5px;
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+    padding: 5% 5% 15% 5%;
+  }
+}
+
+.collapsible-title {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ff6060;
+  background-color: #ff6060;
+  border-radius: 5px;
+  h2 {
+    color: white;
+    margin: 0% 0% 0% 0%;
     border-radius: 5px;
-    h2{
-        color: white;
-        margin: 0% 0% 0% 0%;
-        border-radius: 5px;
-    }
-    img{
-        width: 25px;
-        position: absolute;
-        right: 35px;
-    }
-
+    font-size: 18px;
+    padding: 2% 0% 2% 3%;
+  }
+  img {
+    width: 25px;
+    position: absolute;
+    right: 35px;
+  }
+  li{
+    margin: 0% 0% 0% 10%;
+  }
 }
 
-.collapsible-buton{
-    width: 70px;
+.collapsible-buton {
+  width: 70px;
 }
 
 .collapsible-button.collapsed {
-    transform: rotate(90deg);
-  }
-  
-  .collapsible-button.expanded {
-    transform: rotate(270deg);
-    right: 29px;
-  }
+  transform: rotate(90deg);
+}
 
+.collapsible-button.expanded {
+  transform: rotate(270deg);
+  right: 29px;
+}
+
+@media screen and (min-width:576px){
+  .collapsible-about{
+    width: 80%;
+  }
+}
+
+@media screen and (min-width:992px){
+  .collapsible-about{
+    display: flex;
+    justify-content: center;
+    width: 1023px;
+  }
+}

@@ -45,10 +45,10 @@ export default function Logement() {
       {!logement.pictures ? "" : <Slider images={logement.pictures} />}
       <div className="logement-card" key={logement.id}>
         <LogementTitle title={logement.title} location={logement.location} />
-        <Rating rating={logement.rating} />
         <Tags tags={logement.tags} />
+        <Rating rating={logement.rating} />
         <Host host={logement.host} />
-        <div className="collapsible-about">
+        <div className="collaps">
           <Collapsible title="Description" content={logement.description} />
           <Collapsible title="Equipement" content={logement.equipments} />
         </div>
