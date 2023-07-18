@@ -3,6 +3,11 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
 }
+.banner-about{
+  .image-overlay{
+    display: none; 
+  }
+}
 
 @media screen and (min-width:576px){
   

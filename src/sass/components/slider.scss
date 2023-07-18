@@ -35,11 +35,24 @@
 }
 #droit {
   right: 15px;
-  transform: rotate(0deg);
 }
 
 @media screen and (min-width:576px){
-  
+  .image-index{
+    display: flex;
+    color: white;
+    top: 85%;
+  }
+  .bouton{
+    top: 50%;
+
+  }
+  #droit{
+    right: 4%;
+  }
+  #gauche{
+    left: 4%;
+  }
 }
 
 @media screen and (min-width:992px){
