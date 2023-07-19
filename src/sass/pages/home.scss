@@ -10,7 +10,7 @@
 }
 .logement {
   display: flex;
-  width: 335px;
+  width: 95%;
   position: relative;
   height: 255px;
   img {
@@ -50,11 +50,13 @@
   .home-card{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    margin-top: 3%;
   }
   .home{
-    margin-top: 1%;
-  }
+    width: 45%;
+    margin: 1% 1% 0% 1%;
+    }
 }
 
 @media screen and (min-width:992px){

@@ -70,3 +70,20 @@
     }
   }
 }
+
+@media screen and (min-width:992px){
+  .banner-home{
+    img{
+      height: 223px;
+    }
+    h1{
+      font-size: 48px;
+      width: auto;
+      left: 28%;
+      top: 25%;
+    }
+  }
+  .image-overlay{
+    height: 223px;
+  }
+}
