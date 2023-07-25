@@ -1,7 +1,7 @@
 .Collapsible {
   margin-bottom: 10%;
 }
-.collaps{
+.collaps {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -44,7 +44,7 @@
     position: absolute;
     right: 35px;
   }
-  li{
+  li {
     margin: 0% 0% 0% 10%;
   }
 }
@@ -59,27 +59,27 @@
 
 .collapsible-button.expanded {
   transform: rotate(270deg);
-  right: 29px;
+  right: 35px;
 }
 
-@media screen and (min-width:576px){
-  .collapsible-about{
+@media screen and (min-width: 576px) {
+  .collapsible-about {
     width: 95%;
   }
   .collapsible-button.expanded {
     transform: rotate(270deg);
     right: 55px;
   }
-  
-  .collapsible-title{
-    img{
+
+  .collapsible-title {
+    img {
       right: 55px;
     }
   }
 }
 
-@media screen and (min-width:992px){
-  .collapsible-about{
+@media screen and (min-width: 992px) {
+  .collapsible-about {
     display: flex;
     justify-content: center;
     width: 1023px;

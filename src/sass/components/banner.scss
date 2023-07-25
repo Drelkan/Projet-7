@@ -21,10 +21,10 @@
     object-fit: cover;
   }
 }
-.banner{
+.banner {
   width: 100%;
 }
-.image-overlay{
+.image-overlay {
   background-color: rgba(0, 0, 0, 0.212);
   position: absolute;
   top: 0%;
@@ -36,11 +36,9 @@
   border-radius: 10px;
 }
 
-
-
 .banner-about {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   position: relative;
   padding: 4% 0% 5% 5%;
   img {
@@ -52,15 +50,15 @@
 }
 
 @media screen and (min-width: 576px) {
-  .banner-home{
-    img{
+  .banner-home {
+    img {
       height: 200px;
     }
-    h1{
+    h1 {
       top: 40%;
     }
   }
-  .image-overlay{
+  .image-overlay {
     height: 200px;
   }
   .banner-about {
@@ -71,19 +69,19 @@
   }
 }
 
-@media screen and (min-width:992px){
-  .banner-home{
-    img{
+@media screen and (min-width: 992px) {
+  .banner-home {
+    img {
       height: 223px;
     }
-    h1{
+    h1 {
       font-size: 48px;
       width: auto;
       left: 28%;
       top: 25%;
     }
   }
-  .image-overlay{
+  .image-overlay {
     height: 223px;
   }
 }

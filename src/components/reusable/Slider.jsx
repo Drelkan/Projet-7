@@ -54,7 +54,6 @@ const Slider = ({ images }) => {
 
 export default Slider;
 
-
 // const Slider = ({ images }) => {
 //   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 //   const imageRef = useRef(null);

@@ -1,11 +1,11 @@
 .star-test {
-    display: flex;
-    position: absolute;
-    margin: 8% 0% 0% 4%;
-  }
-  
-  @media screen and (min-width:576px){
-  .star-test{
+  display: flex;
+  position: absolute;
+  margin: 8% 0% 0% 4%;
+}
+
+@media screen and (min-width: 576px) {
+  .star-test {
     margin: 4% 0% 0% 3%;
   }
-  }
+}
