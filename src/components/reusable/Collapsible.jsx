@@ -21,7 +21,7 @@ const Collapsible = ({ title, content }) => {
         />
       </div>
       {!isCollapsed && (
-        <div>
+        <div className="collapsible-content">
           {content !== null && typeof content === "object" ? (
             <ul>
               {content.map((item, index) => (

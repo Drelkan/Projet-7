@@ -2,7 +2,6 @@ header {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
-  margin-left: 20px;
   img {
     width: 145px;
     height: 47px;
@@ -45,4 +44,14 @@ header {
 }
 
 @media screen and (min-width: 992px) {
+  header{
+    img{
+      margin: 0% 30% 0% 0%;
+    }
+    nav{
+      ul{
+        padding-left: 60%;
+      }
+    }
+  }
 }

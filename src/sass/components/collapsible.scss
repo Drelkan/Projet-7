@@ -20,7 +20,6 @@
     border-top: 0px;
     border-radius: 0px 0px 5px 5px;
     list-style: none;
-    padding: 0;
     font-size: 16px;
     padding: 5% 5% 15% 5%;
   }
@@ -64,16 +63,16 @@
 
 @media screen and (min-width: 576px) {
   .collapsible-about {
-    width: 95%;
+    width: 90%;
   }
   .collapsible-button.expanded {
     transform: rotate(270deg);
-    right: 55px;
+    right: 65px;
   }
 
   .collapsible-title {
     img {
-      right: 55px;
+      right: 65px;
     }
   }
 }
@@ -81,7 +80,23 @@
 @media screen and (min-width: 992px) {
   .collapsible-about {
     display: flex;
-    justify-content: center;
-    width: 1023px;
+    flex-direction: column;
+    align-items: center;
   }
+  .collapsible-title{
+    width: 80%;
+  }
+  .collapsible-content{
+    width: 80%;
+  }
+  .collapsible-button.expanded {
+    right: 16%;
+  }
+
+  .collapsible-title {
+    img {
+      right: 16%;
+    }
+  }
+
 }

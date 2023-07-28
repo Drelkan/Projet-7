@@ -24,20 +24,21 @@ export default function Home() {
   return (
     <div>
       <Header />
+      
       <div className="banner-home">
         <Banner title="Chez vous, partout et ailleurs" src={homeBanner} />
       </div>
-      <div className="home-card">
-        {logements.map((logement) => (
-          <div className="home" key={logement.id}>
-            <Link className="logement" to={`/Logement/${logement.id}`}>
-              <img src={logement.cover} alt={logement.alt} />
-              <div className="title">
-                <h2>{logement.title}</h2>
-              </div>
-            </Link>
-          </div>
-        ))}
+        <div className="home-card">
+          {logements.map((logement) => (
+            <div className="home" key={logement.id}>
+              <Link className="logement" to={`/Logement/${logement.id}`}>
+                <img src={logement.cover} alt={logement.alt} />
+                <div className="title">
+                  <h2>{logement.title}</h2>
+                </div>
+              </Link>
+            </div>
+          ))}
       </div>
       <Footer />
     </div>
