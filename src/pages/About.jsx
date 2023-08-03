@@ -1,6 +1,4 @@
 import React from "react";
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
 import Banner from "../components/reusable/Banner";
 import aboutBanner from "../assets/image/Banner-about.png";
 import Collapsible from "../components/reusable/Collapsible";
@@ -8,11 +6,10 @@ import Collapsible from "../components/reusable/Collapsible";
 export default function About() {
   return (
     <div>
-      <Header />
       <div className="banner-about">
         <Banner src={aboutBanner} />
       </div>
-      <div className="collaps">
+      <div className="collaps-about">
         <Collapsible
           title="Fiabilité"
           content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."
@@ -30,7 +27,6 @@ export default function About() {
           content="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisions également des ateliers sur la sécurité domestique pour nos hôtes."
         />
       </div>
-      <Footer />
     </div>
   );
 }

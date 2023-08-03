@@ -14,7 +14,7 @@
   justify-content: center;
 
   img {
-    width: 100%;
+    width: 95%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -30,7 +30,7 @@
   position: absolute;
   width: 24px;
   cursor: pointer;
-  top: 120px;
+  top: 110px;
 }
 
 #gauche {
@@ -56,7 +56,7 @@
     top: 85%;
   }
   .bouton {
-    top: 50%;
+    top: 44%;
   }
   #droit {
     right: 4%;
@@ -72,4 +72,12 @@
 }
 
 @media screen and (min-width: 992px) {
+  .photo{
+    height: 500px;
+    img{
+    }
+  }
+  .bouton{
+    width: 50px;
+  }
 }

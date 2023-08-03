@@ -17,8 +17,21 @@
 
 @media screen and (min-width: 576px) {
   .hote{
+    margin: 0% 0% 3% 0%;
     img{
       width: 80px;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .hote{
+    position: absolute;
+    left: 88%;
+    top: 75%;
+    p{
+      width: 75%;
+      margin-right: 18px;
+      font-size: 18px;
     }
   }
 }

@@ -9,7 +9,7 @@ const Collapsible = ({ title, content }) => {
   };
 
   return (
-    <div className="collapsible-about">
+    <div className="collapsible-card">
       <div className="collapsible-title" onClick={toggleCollapse}>
         <h2 onClick={toggleCollapse}>{title}</h2>
         <img

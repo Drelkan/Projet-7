@@ -1,15 +1,10 @@
 .tag-list {
   display: flex;
-  // justify-content: space-between;
   align-items: center;
   list-style: none;
   padding: 0% 0% 0% 0%;
-  margin: 1% 0% 0% 3%;
+  margin: 1% 0% 0% 5%;
   li {
-    // display: flex;
-    // align-items: center;
-    // width: 30%;
-    // height: 18px;
     border: 1px solid #ff6060;
     padding: 1% 3% 1% 3%;
     margin: 0% 2% 0% 0%;
@@ -20,5 +15,11 @@
   }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 992px) {
+  .tag-list{
+    margin-left: 3%;
+    li{
+      padding: 5px 20px 5px 20px;
+    }
+  }
 }

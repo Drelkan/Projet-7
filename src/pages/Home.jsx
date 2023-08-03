@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Header from "../components/layout/Header";
 import Banner from "../components/reusable/Banner";
 import homeBanner from "../assets/image/Banner-home.png";
-import Footer from "../components/layout/Footer";
 import { Link } from "react-router-dom";
 
 export default function Home() {
@@ -23,7 +21,6 @@ export default function Home() {
 
   return (
     <div>
-      <Header />
       
       <div className="banner-home">
         <Banner title="Chez vous, partout et ailleurs" src={homeBanner} />
@@ -40,7 +37,6 @@ export default function Home() {
             </div>
           ))}
       </div>
-      <Footer />
     </div>
   );
 }

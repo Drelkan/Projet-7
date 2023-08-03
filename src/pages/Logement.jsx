@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
 import { useParams, Navigate } from "react-router-dom";
 import Slider from "../components/reusable/Slider";
 import Collapsible from "../components/reusable/Collapsible";
@@ -41,19 +39,17 @@ export default function Logement() {
 
   return (
     <div>
-      <Header />
       {!logement.pictures ? "" : <Slider images={logement.pictures} />}
       <div className="logement-card" key={logement.id}>
         <LogementTitle title={logement.title} location={logement.location} />
         <Tags tags={logement.tags} />
         <Rating rating={logement.rating} />
         <Host host={logement.host} />
-        <div className="collaps">
-          <Collapsible title="Description" content={logement.description} />
-          <Collapsible title="Equipement" content={logement.equipments} />
-        </div>
+          <div className="collaps-logement">
+            <Collapsible title="Description" content={logement.description} />
+            <Collapsible title="Equipement" content={logement.equipments} />
+          </div>
       </div>
-      <Footer />
     </div>
   );
 }
