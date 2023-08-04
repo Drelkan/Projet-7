@@ -1,7 +1,7 @@
 .carrousel {
   position: relative;
   overflow: hidden;
-  margin: 10px;
+  margin: 20px 10px 10px 10px;
 }
 .container {
   display: flex;
@@ -39,15 +39,7 @@
 }
 #droit {
   right: 15px;
-  
 }
-
-
-
-
-
-
-
 
 @media screen and (min-width: 576px) {
   .image-index {
@@ -64,20 +56,20 @@
   #gauche {
     left: 4%;
   }
-  .photo{
-    img{
+  .photo {
+    img {
       width: 95%;
     }
   }
 }
 
 @media screen and (min-width: 992px) {
-  .photo{
+  .photo {
     height: 500px;
-    img{
+    img {
     }
   }
-  .bouton{
+  .bouton {
     width: 50px;
   }
 }

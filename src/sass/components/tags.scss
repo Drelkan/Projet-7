@@ -15,10 +15,13 @@
   }
 }
 
+@media screen and (min-width: 576px) {
+}
+
 @media screen and (min-width: 992px) {
-  .tag-list{
+  .tag-list {
     margin-left: 3%;
-    li{
+    li {
       padding: 5px 20px 5px 20px;
     }
   }

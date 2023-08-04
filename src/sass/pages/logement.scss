@@ -21,6 +21,7 @@
     }
     h2 {
       font-size: 20px;
+      margin-bottom: 2%;
     }
   }
   .tag-list {
@@ -31,13 +32,13 @@
 }
 
 @media screen and (min-width: 992px) {
-  .logement-title{
-    h1{
+  .logement-title {
+    h1 {
       font-size: 36px;
       width: 665px;
       margin: 1% 0% 0% 3%;
     }
-    h2{
+    h2 {
       font-size: 18px;
       margin: 10px 0% 1% 3%;
     }

@@ -7,10 +7,6 @@
   flex-direction: column;
   align-items: center;
   margin: 5% 0% 0% 0%;
-
-
-
-  
 }
 .logement {
   display: flex;
@@ -18,15 +14,13 @@
   position: relative;
   height: 255px;
 
-  
   img {
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
-    
   }
 }
-.logement::before{
+.logement::before {
   content: "";
   position: absolute;
   top: 0;
@@ -34,8 +28,11 @@
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
-
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
 }
 .title {
   h2 {
@@ -43,8 +40,8 @@
     justify-content: center;
     position: absolute;
     padding: 0% 0% 0% 4%;
-    font-size: 16px;
-    width: 96%;
+    font-size: 18px;
+    width: 60%;
     left: 0%;
     height: 25%;
     top: 64%;
@@ -66,23 +63,23 @@
 }
 
 @media screen and (min-width: 992px) {
-  .home{
+  .home {
     width: 33%;
   }
-  .home-card{
+  .home-card {
     width: 90%;
-    background-color: #F6F6F6;
+    background-color: #f6f6f6;
     margin: auto;
     margin-top: 2%;
     padding: 1% 0% 2% 0%;
     border-radius: 25px;
   }
-  .logement{
+  .logement {
     width: 80%;
     height: 380px;
   }
-  .title{
-    h2{
+  .title {
+    h2 {
       font-size: 18px;
       width: 60%;
     }

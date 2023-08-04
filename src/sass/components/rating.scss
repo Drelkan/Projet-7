@@ -6,12 +6,20 @@
 
 @media screen and (min-width: 576px) {
   .star-test {
+    top: 37%;
+    img {
+      width: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .star-test {
     margin: 4% 0% 0% 5%;
     left: 86%;
     top: 78%;
-    img{
+    img {
       width: 24px;
     }
-
   }
 }

@@ -23,21 +23,32 @@
 }
 
 @media screen and (min-width: 576px) {
-  .notFound{
+  .notFound {
     padding: 25% 0% 20% 0%;
-    img{
+    img {
       width: 50%;
     }
-    h2{
+    h2 {
       margin-bottom: 20%;
       font-size: 22px;
       width: 285px;
     }
-    a{
+    a {
       font-size: 20px;
     }
   }
 }
 
 @media screen and (min-width: 992px) {
+  .notFound {
+    padding: 10% 0% 0% 0%;
+    img {
+      width: 597px;
+    }
+    h2 {
+      font-size: 36px;
+      width: 872px;
+      margin-bottom: 10%;
+    }
+  }
 }
