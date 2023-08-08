@@ -119,6 +119,15 @@
   }
 
   @media screen and (min-width: 992px) {
+    .collaps-about{
+      .collapsible-card{
+        margin: 0% 0% 2% 0%;
+        h2{
+          padding: 7px 0% 7px 1%;
+        }
+      }
+    }
+
     .collaps-logement {
       display: flex;
       justify-content: space-between;
@@ -133,6 +142,12 @@
       }
       .collapsible-content {
         width: 100%;
+        border: 1px solid #f6f6f6;
+        background-color: #f6f6f6;
+        height: 200px;
+        p,ul{
+          padding: 4% 4% 0% 4%;
+        }
       }
     }
 

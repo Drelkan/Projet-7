@@ -30,6 +30,7 @@ const Slider = ({ images }) => {
           <img src={images[currentImageIndex]} alt="" />
         </div>
       </div>
+
       {showImageIndex && (
         <img
           src={arrow}
@@ -54,9 +55,10 @@ const Slider = ({ images }) => {
 
 export default Slider;
 
+
+
 // const Slider = ({ images }) => {
 //   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-//   const imageRef = useRef(null);
 
 //   const gauche = () => {
 //     setCurrentImageIndex((prevIndex) =>
@@ -72,33 +74,16 @@ export default Slider;
 
 //   const showImageIndex = images.length > 1;
 
-//   const nextImageStyle = {
-//     transform: `translateX(-${currentImageIndex * 100}%)`,
-//     transition: "transform 0.5s ease-in-out",
-//   };
-
 //   return (
 //     <div className="carrousel">
 //       <div className="container" id="logements">
-//         <div className="photo" style={nextImageStyle} ref={imageRef}>
+//         <div className="photo">
 //           {showImageIndex && (
 //             <span className="image-index">
 //               {currentImageIndex + 1} / {images.length}
 //             </span>
 //           )}
-//           {images.map((image, index) => (
-//             <div
-//               key={index}
-//               className="photo-item"
-//               style={{
-//                 width: "100%",
-//                 minWidth: "100%",
-//                 flexShrink: 0,
-//               }}
-//             >
-//               <img src={image} alt="" style={{ width: "100%" }} />
-//             </div>
-//           ))}
+//           <img src={images[currentImageIndex]} alt="" />
 //         </div>
 //       </div>
 //       {showImageIndex && (
@@ -124,3 +109,8 @@ export default Slider;
 // };
 
 // export default Slider;
+
+
+
+
+
