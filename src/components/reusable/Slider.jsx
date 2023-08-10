@@ -1,5 +1,6 @@
-import React, { useState,useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import arrow from "./../../assets/image/fleche.png";
+// ,
 
 // const Slider = ({ images }) => {
 //   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -79,29 +80,44 @@ const Slider = ({ images }) => {
 
   const showImageIndex = images.length > 1;
 
-  const nextImageStyle = {
-    transform: `translateX(-${currentImageIndex * 100}%)`,
-    transition: "transform 0.5s ease-in-out",
-  };
+  // const nextImageStyle = {
+  //   transform: `translateX(-${currentImageIndex * 100}%)`,
+  //   transition: "transform 0.5s ease-in-out",
+  // };
 
   return (
     <div className="carrousel">
       <div className="container" id="logements">
-        <div className="photo" style={nextImageStyle} ref={imageRef}>
+        {/* <div className="photo" style={nextImageStyle} ref={imageRef}> */}
           {showImageIndex && (
             <span className="image-index">
               {currentImageIndex + 1} / {images.length}
             </span>
           )}
-          {images.map((image, index) => (
+          {/* {images.map((image, index) => (
             <div
               key={index}
               className="photo-item"
             >
               <img src={image} alt=""  />
             </div>
-          ))}
-        </div>
+          ))} */}
+          {images.map((image, index) => {
+            let classImg
+            if (index === currentImageIndex ){
+              classImg = "imageCourante"
+            
+            }else{
+              if (index < currentImageIndex){
+                classImg = "imagePrecedente"
+              }else if(index > currentImageIndex){
+                classImg = "imageSuivante"
+              }
+            }
+            return(<img src={image} alt="" className={`${classImg}`} />)
+        })}
+
+        {/* </div> */}
       </div>
       {showImageIndex && (
         <img

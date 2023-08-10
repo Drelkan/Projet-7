@@ -1,11 +1,12 @@
 body {
-  height: 100vh;
   font-family: "Montserrat", sans-serif;
+  position: relative;
+
   #root{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  height: 100vh;
+    // height: 100vh;
   }
 }
 h1,
