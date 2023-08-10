@@ -2,7 +2,10 @@
   position: relative;
   overflow: hidden;
   margin: 20px 10px 10px 10px;
+
 }
+
+
 .container {
   display: flex;
 }
@@ -16,8 +19,8 @@
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     border-radius: 10px;
+    object-fit: cover;
   }
 }
 
@@ -30,7 +33,7 @@
   position: absolute;
   width: 24px;
   cursor: pointer;
-  bottom: 90px;
+  bottom: 100px;
 }
 
 #gauche {
@@ -40,6 +43,81 @@
 #droit {
   right: 15px;
 }
+
+.photo-item{
+  width: 100%;
+  min-width: 100%;
+  flex-shrink: 0;
+  
+
+}
+
+
+
+// .carrousel {
+//   position: relative;
+//   overflow: hidden;
+//   margin: 20px 10px 10px 10px;
+// }
+
+// .container {
+//   display: flex;
+//   transition: transform 0.5s ease-in-out;
+//   width: 100%; 
+// }
+
+// .container.slide-left {
+//   transform: translateX(-50%);
+// }
+
+// .container.slide-right {
+//   transform: translateX(-150%);
+// }
+
+// .photo {
+//   flex: 0 0 100%;
+//   height: 255px;
+//   display: none;
+// }
+
+// .photo.visible {
+//   display: flex;
+//   justify-content: center;
+// }
+
+// .photo img {
+//   max-width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+//   border-radius: 10px;
+// }
+
+// .image-index {
+//   position: absolute;
+//   display: none;
+// }
+
+// .bouton {
+//   position: absolute;
+//   width: 24px;
+//   cursor: pointer;
+//   bottom: 100px;
+// }
+
+// #gauche {
+//   left: 15px;
+//   transform: rotate(180deg);
+// }
+// #droit {
+//   right: 15px;
+//   transform: rotate(0deg);
+// }
+
+
+
+
+
+
 
 
 

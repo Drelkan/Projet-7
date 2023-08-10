@@ -5,7 +5,7 @@ import Collapsible from "../components/reusable/Collapsible";
 
 export default function About() {
   return (
-    <div>
+    <div className="about-card">
       <div className="banner-about">
         <Banner src={aboutBanner} />
       </div>

@@ -43,8 +43,10 @@ export default function Logement() {
       <div className="logement-card" key={logement.id}>
         <LogementTitle title={logement.title} location={logement.location} />
         <Tags tags={logement.tags} />
-        <Rating rating={logement.rating} />
-        <Host host={logement.host} />
+        <div className="rating-test">
+          <Rating rating={logement.rating} />
+          <Host host={logement.host} />
+        </div>
           <div className="collaps-logement">
             <Collapsible title="Description" content={logement.description} />
             <Collapsible title="Equipement" content={logement.equipments} />

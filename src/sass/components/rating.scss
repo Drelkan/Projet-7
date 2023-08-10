@@ -1,13 +1,11 @@
 .star-test {
   display: flex;
-  position: absolute;
-  left: 5%;
-  top: 60%;
+  margin: 0% 0% 0% 4%;
 }
 
 @media screen and (min-width: 576px) {
   .star-test {
-    top: 46%;
+    margin: 0% 0% 0% 5%;
     img {
       width: 20px;
     }
@@ -16,9 +14,9 @@
 
 @media screen and (min-width: 992px) {
   .star-test {
-    margin: 4% 0% 0% 5%;
-    left: 86%;
-    top: 78%;
+    position: absolute;
+    left: 85.5%;
+    top: 82%;
 
     img {
       width: 24px;

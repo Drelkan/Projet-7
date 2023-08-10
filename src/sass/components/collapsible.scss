@@ -7,6 +7,9 @@
   align-items: center;
   flex-direction: column;
 }
+.collaps-logement {
+  margin-top: 5px;
+}
 
 .collapsible-card {
   width: 90%;
@@ -21,7 +24,7 @@
     border-radius: 0px 0px 5px 5px;
     list-style: none;
     font-size: 12px;
-    padding: 5% 2% 12% 2%;
+    padding: 5% 2% 5% 2%;
   }
 }
 
@@ -83,6 +86,26 @@
       right: 65px;
     }
   }
+  .collapsible-title{
+    h2{
+      padding: 10px 0px 10px 20px;
+    }
+    img{
+      width: 20px;
+      right: 75px;
+    }
+  }
+
+  .collaps-about{
+    .collapsible-card{
+      width: 85%;
+    }
+  }
+
+
+
+
+
 }
 
 @media screen and (min-width: 992px) {
@@ -98,8 +121,7 @@
 
   .collapsible-title {
     img {
-      right: 16%;
-    }
+      right: 14%;    }
   }
 
   .collaps-about {
@@ -119,11 +141,16 @@
   }
 
   @media screen and (min-width: 992px) {
-    .collaps-about{
-      .collapsible-card{
+    .collaps-about {
+      .collapsible-card {
         margin: 0% 0% 2% 0%;
-        h2{
-          padding: 7px 0% 7px 1%;
+        width: 95%;
+        h2 {
+          font-size: 24px;
+          padding: 10px 0% 10px 2%;
+        }
+        p{
+          padding: 2% 2% 1% 2%;
         }
       }
     }
@@ -145,7 +172,8 @@
         border: 1px solid #f6f6f6;
         background-color: #f6f6f6;
         height: 200px;
-        p,ul{
+        p,
+        ul {
           padding: 4% 4% 0% 4%;
         }
       }
