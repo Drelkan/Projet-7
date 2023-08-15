@@ -3,26 +3,38 @@
   overflow: hidden;
   margin: 20px 10px 10px 10px;
 
-}
+  .container {
+    display: flex;
+    // position: relative;
+    // animation-name: slider;
+    // animation-duration: 10s;  
+    // animation-iteration-count: infinite;
+    // animation-timing-function: linear;
+  
+  
+  
+  }
 
-
-.container {
-  display: flex;
-}
-
-.photo {
-  min-width: 100%;
-  height: 255px;
-  display: flex;
-  justify-content: center;
-
-  img {
+  .imageCourante, .imageSuivante, .imagePrecedente {
     width: 100%;
-    height: 100%;
+    height: 255px;
     border-radius: 10px;
     object-fit: cover;
+    
+
+    img {
+      width: 100%;
+      height: 100%;
+
+    }
   }
 }
+
+
+.imageCourante{
+position: absolute;
+}
+
 
 .image-index {
   position: absolute;
@@ -33,7 +45,7 @@
   position: absolute;
   width: 24px;
   cursor: pointer;
-  bottom: 100px;
+  top: 107px;
 }
 
 #gauche {
@@ -44,12 +56,6 @@
   right: 15px;
 }
 
-.photo-item{
-  width: 100%;
-  min-width: 100%;
-  
-
-}
 
 
 
