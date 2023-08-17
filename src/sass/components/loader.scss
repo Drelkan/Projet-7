@@ -31,6 +31,20 @@
   }
 
 
-  @keyframes s3{ 
-    100%{transform: rotate(1turn)}
+
+
+  @media screen and (min-width: 576px) {
+    .custom-loader {
+        top: 50%;
+        left: 44%;
+    }
   }
+
+
+  @media screen and (min-width: 992px) {
+    .custom-loader{
+      top: 50%;
+      left: 47%;
+    }
+  }
+  
