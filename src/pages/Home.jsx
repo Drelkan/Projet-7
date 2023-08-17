@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import Banner from "../components/reusable/Banner";
 import homeBanner from "../assets/image/Banner-home.png";
 import { Link } from "react-router-dom";
+import Pagination from "../components/reusable/Pagination";
 
 export default function Home() {
   const [logements, setLogements] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const logementsPerPage = 5;
+  const logementsPerPage = 4;
 
   useEffect(() => {
     fetch("./datas/logements.json")
@@ -59,38 +60,3 @@ export default function Home() {
   );
 }
 
-function Pagination({ logementsPerPage, totalLogements, currentPage, setCurrentPage }) {
-  const pageNumbers = [];
-
-  for (let i = 1; i <= Math.ceil(totalLogements / logementsPerPage); i++) {
-    pageNumbers.push(i);
-  }
-
-  return (
-    <div className="pagination">
-      <button
-        onClick={() => setCurrentPage(currentPage - 1)}
-        disabled={currentPage === 1}
-        className="pagination-button"
-      >
-        &lt; 
-      </button>
-      {pageNumbers.map((number) => (
-        <button
-          key={number}
-          onClick={() => setCurrentPage(number)}
-          className={currentPage === number ? "active" : ""}
-        >
-          {number}
-        </button>
-      ))}
-      <button
-        onClick={() => setCurrentPage(currentPage + 1)}
-        disabled={currentPage === pageNumbers.length}
-        className="pagination-button"
-      >
-        &gt;
-      </button>
-    </div>
-  );
-}
