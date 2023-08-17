@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 export default function Home() {
   const [logements, setLogements] = useState([]);
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     fetch("./datas/logements.json")
       .then((response) => {
@@ -15,16 +17,20 @@ export default function Home() {
       })
       .then((test) => {
         setLogements(test);
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000);
       })
       .catch((error) => console.log(error));
   }, []);
 
   return (
     <div>
-      
-      <div className="banner-home">
-        <Banner title="Chez vous, partout et ailleurs" src={homeBanner} />
-      </div>
+      <div className={`custom-loader ${loading ? "" : "hidden"}`}></div>
+      <div className={`content ${loading ? "hidden" : "visible"}`}>
+        <div className="banner-home">
+          <Banner title="Chez vous, partout et ailleurs" src={homeBanner} />
+        </div>
         <div className="home-card">
           {logements.map((logement) => (
             <div className="home" key={logement.id}>
@@ -36,6 +42,7 @@ export default function Home() {
               </Link>
             </div>
           ))}
+        </div>
       </div>
     </div>
   );

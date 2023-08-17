@@ -39,7 +39,8 @@ export default function Logement() {
 
   return (
     <div>
-      {!logement.pictures ? "" : <Slider images={logement.pictures} />}
+      
+            {!logement.pictures ? "" : <Slider images={logement.pictures} />}
       <div className="logement-card" key={logement.id}>
         <LogementTitle title={logement.title} location={logement.location} />
         <Tags tags={logement.tags} />
@@ -52,7 +53,9 @@ export default function Logement() {
             <Collapsible title="Equipement" content={logement.equipments} />
           </div>
       </div>
-    </div>
+
+      
+      </div>
   );
 }
 
