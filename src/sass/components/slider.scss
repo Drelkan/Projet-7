@@ -21,10 +21,14 @@
     }
   }
 }
+.imagePrecedente, .imageSuivante{
+  display: none;
+}
 
 .imageCourante{
-  position: absolute
-}
+    .button:active{
+      border: 1px solid red;
+    }}
 
 
 
