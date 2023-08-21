@@ -38,11 +38,3 @@ const Collapsible = ({ title, content }) => {
 };
 
 export default Collapsible;
-
-// export function fleche({src}) {
-//   return (
-//     <div>
-//         <img src={arrow} className='bouton' id='haut' alt="haut"/>
-//     </div>
-//   )
-// }

@@ -1,11 +1,11 @@
-.star-test {
+.star {
   display: flex;
-  margin: 0% 0% 0% 4%;
+  margin-left: 4%;
 }
 
 @media screen and (min-width: 576px) {
-  .star-test {
-    margin: 0% 0% 0% 5%;
+  .star {
+    margin-left: 5%;
     img {
       width: 20px;
     }
@@ -13,8 +13,7 @@
 }
 
 @media screen and (min-width: 992px) {
-  .star-test {
-
+  .star {
     img {
       width: 24px;
     }

@@ -10,7 +10,6 @@
 .collaps-logement {
   margin-top: 5px;
 }
-
 .collapsible-card {
   width: 90%;
   margin: 0% 0% 5% 0%;
@@ -19,15 +18,14 @@
     border: 1px solid #f6f6f6;
     background-color: #f6f6f6;
     color: #ff6060;
-    margin-top: 0px;
-    border-top: 0px;
-    border-radius: 0px 0px 5px 5px;
+    margin-top: 0;
+    border-top: 0;
+    border-radius: 0 0 5px 5px;
     list-style: none;
     font-size: 12px;
-    padding: 5% 2% 5% 2%;
+    padding: 5% 2%;
   }
 }
-
 .collapsible-title {
   display: flex;
   align-items: center;
@@ -36,10 +34,10 @@
   border-radius: 5px;
   h2 {
     color: white;
-    margin: 0% 0% 0% 0%;
+    margin: 0;
     border-radius: 5px;
     font-size: 13px;
-    padding: 2% 0% 2% 3%;
+    padding: 2% 3%;
   }
   img {
     width: 15px;
@@ -47,20 +45,19 @@
     right: 35px;
   }
   li {
-    margin: 0% 0% 0% 10%;
+    margin-left: 10%;
   }
 }
-
 .collapsible-buton {
   width: 70px;
 }
-
 .collapsible-button.collapsed {
   transform: rotate(90deg);
+  transition: transform 300ms ease-in-out;
 }
-
 .collapsible-button.expanded {
   transform: rotate(270deg);
+  transition: transform 300ms ease-in-out;
   right: 35px;
 }
 
@@ -73,119 +70,86 @@
     }
   }
   .collapsible-button.expanded {
-    transform: rotate(270deg);
-    right: 65px;
+    right: 75px;
   }
-
   .collapsible-title {
     h2 {
       font-size: 20px;
-    }
-    img {
-      width: 25px;
-      right: 65px;
-    }
-  }
-  .collapsible-title{
-    h2{
       padding: 10px 0px 10px 20px;
     }
-    img{
+    img {
       width: 20px;
       right: 75px;
     }
   }
-
-  .collaps-about{
-    .collapsible-card{
+  .collaps-about {
+    .collapsible-card {
       width: 85%;
     }
   }
-
-
-
-
-
 }
 
 @media screen and (min-width: 992px) {
   .collapsible-title {
     width: 80%;
+    img {
+      right: 14%;
+    }
   }
   .collapsible-content {
     width: 80%;
   }
-  .collapsible-button.expanded {
-    right: 14%;
-  }
-
-  .collapsible-title {
-    img {
-      right: 14%;    }
-  }
-
   .collaps-about {
     .collapsible-card {
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-    .collapsible-title {
-      font-size: 24px;
-    }
-    .collapsible-content {
+      margin: 0% 0% 2% 0%;
+      width: 95%;
+      .collapsible-title {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 24px;
+        padding: 10px 0% 10px 2%;
+      }
       p {
         font-size: 24px;
+        padding: 2% 2% 1% 2%;
       }
     }
   }
-
-  @media screen and (min-width: 992px) {
-    .collaps-about {
-      .collapsible-card {
-        margin: 0% 0% 2% 0%;
-        width: 95%;
-        h2 {
-          font-size: 24px;
-          padding: 10px 0% 10px 2%;
-        }
-        p{
-          padding: 2% 2% 1% 2%;
-        }
+  .collaps-logement {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    margin: 0 85px 0 85px;
+    .collapsible-title {
+      img {
+        position: relative;
+        margin-left: 90%;
       }
     }
-
-    .collaps-logement {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-direction: row;
-      margin: 1% 3% 0% 3%;
-      .collapsible-title {
-        img {
-          position: relative;
-          margin: 0% 0% 0% 90%;
-        }
-      }
-      .collapsible-content {
-        width: 100%;
-        border: 1px solid #f6f6f6;
-        background-color: #f6f6f6;
-        height: 200px;
-        p,
-        ul {
-          padding: 4% 4% 0% 4%;
-        }
-      }
-    }
-
-    .collaps-logement .collapsible-card {
-      width: calc(50% - 2%);
-      margin: 0;
-    }
-
-    .collaps-logement .collapsible-title {
+    .collapsible-content {
       width: 100%;
+      border: 1px solid #f6f6f6;
+      background-color: #f6f6f6;
+      height: 200px;
+      p,
+      ul {
+        padding: 4% 4% 0% 4%;
+      }
     }
+  }
+  .collapsible-button.expanded {
+    right: 14%;
+  }
+  .collaps-logement .collapsible-card {
+    width: calc(50% - 2%);
+    margin: 0;
+  }
+  .collaps-logement .collapsible-title {
+    width: 100%;
   }
 }

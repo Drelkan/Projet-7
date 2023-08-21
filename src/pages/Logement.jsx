@@ -39,73 +39,21 @@ export default function Logement() {
 
   return (
     <div>
-      
-            {!logement.pictures ? "" : <Slider images={logement.pictures} />}
+      {!logement.pictures ? "" : <Slider images={logement.pictures} />}
       <div className="logement-card" key={logement.id}>
-        <div className="logement-test">
+        <div className="logement-contener">
           <LogementTitle title={logement.title} location={logement.location} />
           <Tags tags={logement.tags} />
-
         </div>
-        <div className="rating-test">
+        <div className="rating-contener">
           <Rating rating={logement.rating} />
           <Host host={logement.host} />
         </div>
       </div>
-          <div className="collaps-logement">
-            <Collapsible title="Description" content={logement.description} />
-            <Collapsible title="Equipement" content={logement.equipments} />
-          </div>
-
-      
+      <div className="collaps-logement">
+        <Collapsible title="Description" content={logement.description} />
+        <Collapsible title="Equipement" content={logement.equipments} />
       </div>
+    </div>
   );
 }
-
-// const Collapsible = ({ title, content}) => {
-//   const [isCollapsed, setIsCollapsed] = useState(true);
-
-//   const toggleCollapse = () => {
-//     setIsCollapsed(!isCollapsed);
-//   };
-
-//   return (
-//     <div className='collapsible-about'>
-//       <h2 onClick={toggleCollapse}>{title}</h2>
-//       {/* {!isCollapsed && <div>{!content ? typeof content !== String ? <ul>{content.map((item, index) => <li key={index}>{item}</li>)}</ul> : <p>{content}</p> : ""}</div>} */}
-//       {!isCollapsed && (
-//         <div>
-//           {content !== null && typeof content === 'object' ? (
-//             <ul>
-//               {content.map((item, index) => (
-//                 <li key={index}>{item}</li>
-//               ))}
-//             </ul>
-//           ) : (
-//             <p>{content}</p>
-//           )}
-//         </div>
-//       )}
-//     </div>
-//   )
-// }
-
-/* {logement.rating && (
-                      <div className='star-test'>
-                        {[...Array(parseInt(logement.rating) || 0)].map ((_, index) => (
-                              <div key={index} className='star-rating'>
-                                <img src={StarActive} alt="étoile" className='star-active' />
-                              </div>
-                            ))}
-                            {[...Array(5 - (parseInt(logement.rating) || 0))].map((_, index) => (
-                              <div key={index} className='star-rating'>
-                                <img src={StarInactive} alt="étoile" className='star-inactive' />
-                              </div>
-                            ))}
-                          </div>
-                    )} */
-
-//   <div className='logement-title'>
-//   <h1>{logement.title}</h1>
-//   <h2>{logement.location}</h2>
-// </div>

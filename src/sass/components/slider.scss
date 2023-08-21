@@ -5,32 +5,32 @@
 
   .container {
     display: flex;
-  }
-
-  .imageCourante, .imageSuivante, .imagePrecedente {
-    width: 100%;
+    position: relative;
+    overflow: hidden;
     height: 255px;
+  }
+  .caroussel__item {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
     object-fit: cover;
-    
-
-    img {
-      width: 100%;
-      height: 100%;
-
+    position: absolute;
+    transition: transform 500ms ease-in-out;
+    &.imageCourante {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    &.imageSuivante {
+      transform: translateX(100%);
+      transition: transform 500ms ease-in-out, opacity 10ms ease-in-out;
+    }
+    &.imagePrecedente {
+      transform: translateX(-100%);
+      transition: transform 500ms ease-in-out, opacity 10ms ease-in-out;
     }
   }
 }
-.imagePrecedente, .imageSuivante{
-  display: none;
-}
-
-.imageCourante{
-    .button:active{
-      border: 1px solid red;
-    }}
-
-
 
 .image-index {
   position: absolute;
@@ -52,142 +52,21 @@
   right: 15px;
 }
 
-
-
-// .carrousel {
-//   position: relative;
-//   overflow: hidden;
-//   margin: 20px 10px 10px 10px;
-
-//   .container {
-//     display: flex;
-//     transition: transform 0.5s ease-in-out;
-//   }
-
-//   .imageCourante, .imageSuivante, .imagePrecedente {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 255px;
-//     border-radius: 10px;
-//     object-fit: cover;
-//     opacity: 0;
-//     transition: opacity 0.5s ease-in-out;
-
-//     img {
-//       width: 100%;
-//       height: 100%;
-//     }
-//   }
-
-//   .imageCourante {
-//     opacity: 1;
-//     z-index: 2;
-//   }
-
-//   .imageSuivante, .imagePrecedente {
-//     z-index: 1;
-//   }
-// }
-
-// .image-index {
-//   position: absolute;
-//   display: none;
-// }
-
-// .bouton {
-//   position: absolute;
-//   width: 24px;
-//   cursor: pointer;
-//   top: 107px;
-// }
-
-// #gauche {
-//   left: 15px;
-//   transform: rotate(180deg);
-// }
-// #droit {
-//   right: 15px;
-// }
-
-
-
-// .carrousel {
-//   position: relative;
-//   overflow: hidden;
-//   margin: 20px 10px 10px 10px;
-// }
-
-// .container {
-//   display: flex;
-//   transition: transform 0.5s ease-in-out;
-//   width: 100%; 
-// }
-
-// .container.slide-left {
-//   transform: translateX(-50%);
-// }
-
-// .container.slide-right {
-//   transform: translateX(-150%);
-// }
-
-// .photo {
-//   flex: 0 0 100%;
-//   height: 255px;
-//   display: none;
-// }
-
-// .photo.visible {
-//   display: flex;
-//   justify-content: center;
-// }
-
-// .photo img {
-//   max-width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-//   border-radius: 10px;
-// }
-
-// .image-index {
-//   position: absolute;
-//   display: none;
-// }
-
-// .bouton {
-//   position: absolute;
-//   width: 24px;
-//   cursor: pointer;
-//   bottom: 100px;
-// }
-
-// #gauche {
-//   left: 15px;
-//   transform: rotate(180deg);
-// }
-// #droit {
-//   right: 15px;
-//   transform: rotate(0deg);
-// }
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (min-width: 576px) {
+  .carrousel {
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    width: 95%;
+  }
   .image-index {
     display: flex;
     color: white;
     top: 85%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%);
   }
   .bouton {
     top: 44%;
@@ -206,12 +85,22 @@
 }
 
 @media screen and (min-width: 992px) {
+  .carrousel {
+    .container {
+      height: 445px;
+      width: 92%;
+    }
+  }
   .photo {
     height: 500px;
-    img {
-    }
   }
   .bouton {
     width: 50px;
+  }
+  #gauche {
+    left: 5%;
+  }
+  #droit {
+    right: 5%;
   }
 }

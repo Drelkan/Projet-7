@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   const [logements, setLogements] = useState([]);
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

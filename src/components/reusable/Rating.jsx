@@ -5,7 +5,7 @@ import StarInactive from "../../assets/image/star-inactive.png";
 export default function Rating({ rating }) {
   return (
     rating && (
-      <div className="star-test">
+      <div className="star">
         {[...Array(parseInt(rating) || 0)].map((_, index) => (
           <div key={index} className="star-rating">
             <img src={StarActive} alt="étoile" className="star-active" />
