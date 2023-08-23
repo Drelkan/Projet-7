@@ -1,12 +1,12 @@
 body {
   font-family: "Montserrat", sans-serif;
   position: relative;
+  margin: 0;
 
   #root{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // height: 100%;
     position: relative;
   }
 }

@@ -2,6 +2,12 @@
   display: flex;
   margin-left: 4%;
 }
+.rating-contener {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 @media screen and (min-width: 576px) {
   .star {
@@ -10,9 +16,26 @@
       width: 20px;
     }
   }
+  .rating-contener {
+    flex-direction: column-reverse;
+    margin: 0% 0% 0% 34%;
+    padding-bottom: 25px;
+    .star {
+      margin: 0% 0% 0% 30%;
+    }
+  }
+
 }
 
 @media screen and (min-width: 992px) {
+  .rating-contener {
+    margin: 0% 0% 0% 32.8%;
+    padding-bottom: 70px;
+    .star {
+      margin: 0 0 0 44%;
+    }
+  }
+
   .star {
     img {
       width: 24px;

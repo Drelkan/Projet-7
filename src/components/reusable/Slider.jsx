@@ -50,7 +50,7 @@ const Slider = ({ images }) => {
             <img
               key={index}
               src={image}
-              alt=""
+              alt="Logement"
               className={`caroussel__item ${classImg}`}
             />
           );

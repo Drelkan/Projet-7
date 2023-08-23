@@ -2,12 +2,15 @@
   position: relative;
   overflow: hidden;
   margin: 20px 10px 10px 10px;
+  display: flex;
+justify-content: center;
 
   .container {
     display: flex;
     position: relative;
     overflow: hidden;
     height: 255px;
+    width: 98%;
   }
   .caroussel__item {
     opacity: 0;
@@ -56,9 +59,10 @@
   .carrousel {
     display: flex;
     justify-content: center;
+      .container {
+    width: 94%;
   }
-  .container {
-    width: 95%;
+
   }
   .image-index {
     display: flex;

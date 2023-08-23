@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Banner from "../components/reusable/Banner";
 import homeBanner from "../assets/image/Banner-home.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { ROUTES } from "../constants/routes";
+
 
 export default function Home() {
   const [logements, setLogements] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("./datas/logements.json")
@@ -14,18 +17,20 @@ export default function Home() {
           return response.json();
         }
       })
-      .then((test) => {
-        setLogements(test);
+      .then((datas) => {
+        setLogements(datas);
         setTimeout(() => {
           setLoading(false);
         }, 500);
       })
-      .catch((error) => console.log(error));
-  }, []);
+      .catch(() => {
+        navigate(ROUTES.NOTFOUND);
+      });
+  }, [navigate]);
 
   return (
-    <div>
-      <div className={`custom-loader ${loading ? "" : "hidden"}`}></div>
+    <>
+      <div className={`custom-loader ${loading ? null : "hidden"}`}></div>
       <div className={`content ${loading ? "hidden" : "visible"}`}>
         <div className="banner-home">
           <Banner title="Chez vous, partout et ailleurs" src={homeBanner} />
@@ -43,6 +48,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 }
