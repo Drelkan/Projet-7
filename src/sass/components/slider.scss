@@ -47,11 +47,11 @@ justify-content: center;
   top: 107px;
 }
 
-#gauche {
+#left {
   left: 15px;
   transform: rotate(180deg);
 }
-#droit {
+#right {
   right: 15px;
 }
 
@@ -75,10 +75,10 @@ justify-content: center;
   .bouton {
     top: 44%;
   }
-  #droit {
+  #right {
     right: 4%;
   }
-  #gauche {
+  #left {
     left: 4%;
   }
   .photo {
@@ -101,10 +101,10 @@ justify-content: center;
   .bouton {
     width: 50px;
   }
-  #gauche {
+  #left {
     left: 5%;
   }
-  #droit {
+  #right {
     right: 5%;
   }
 }

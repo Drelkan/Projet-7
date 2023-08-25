@@ -8,13 +8,13 @@ const Slider = ({ images }) => {
     setCurrentImageIndex(0);
   }, []);
 
-  const gauche = () => {
+  const left = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
 
-  const droit = () => {
+  const right = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
@@ -60,18 +60,18 @@ const Slider = ({ images }) => {
         <img
           src={arrow}
           className="bouton"
-          id="gauche"
+          id="left"
           alt="Gauche"
-          onClick={gauche}
+          onClick={left}
         />
       )}
       {showImageIndex && (
         <img
           src={arrow}
           className="bouton"
-          id="droit"
+          id="right"
           alt="Droit"
-          onClick={droit}
+          onClick={right}
         />
       )}
     </div>
